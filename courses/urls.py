@@ -4,6 +4,8 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('courses', views.CourseView)
+router.register('author', views.AuthorView)
+router.register('coursecontent', views.CourseContentView)
 
 
 urlpatterns = [
