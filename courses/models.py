@@ -18,10 +18,10 @@ class CourseContent(models.Model):
 class Course(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE,blank=True, null=True)
     language = models.CharField(max_length=100)
     price = models.CharField(max_length=10)
-    coursecontent = models.ForeignKey(CourseContent, on_delete=models.CASCADE)
+    coursecontent = models.ForeignKey(CourseContent, on_delete=models.CASCADE,blank=True, null=True)
     
     def __str__(self):
         return self.name
