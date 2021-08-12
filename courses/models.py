@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import CharField, SlugField
 
 class Author(models.Model):
     name = models.CharField(max_length=40)
@@ -7,6 +8,10 @@ class Author(models.Model):
     description = models.CharField(max_length=40)
     def __str__(self):
         return self.name
+
+class Category(models.Model):
+    name=models.CharField(max_length=50)
+    slug =models.SlugField(unique=True)
 
 class CourseContent(models.Model):
     name = models.CharField(max_length=40)
@@ -18,9 +23,10 @@ class CourseContent(models.Model):
 class Course(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE,blank=True, null=True)
     language = models.CharField(max_length=100)
     price = models.CharField(max_length=10)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE,blank=True, null=True)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE,blank=True, null=True)
     coursecontent = models.ForeignKey(CourseContent, on_delete=models.CASCADE,blank=True, null=True)
     
     def __str__(self):
