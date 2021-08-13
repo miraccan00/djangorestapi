@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "961d0c31-3162-4be5-bb09-95a2defa18c5",
+		"name": "API Course Site Tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Course Content",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/coursecontent/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"coursecontent",
+						""
+					]
+				},
+				"description": "## If you want to get Course Content Data\n\n__You need to request GET Course Content collection__\n\n{\n\n\"name\":\"string\",\n\n\"videoname\":\"string\",\n\n\"videourl\":\"string\"\n\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Course Content",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"String\",\r\n        \"videoname\": \"String\",\r\n        \"videourl\": \"String\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/coursecontent/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"coursecontent",
+						""
+					]
+				},
+				"description": "## If you want to create Course Content Data \n__You need to request Post Course Content colection__\n\nbody should be look like this:"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course Content",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"String\",\r\n    \"videoname\": \"String\",\r\n    \"videourl\": \"String\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/coursecontent/{coursecontentid}/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"coursecontent",
+						"{coursecontentid}",
+						""
+					]
+				},
+				"description": "## If you want to update Course Content Data\n \n__You need to request Update Course Content colection__\n\ncoursecontentid = put the coursecontentid you want to update here\n\nbody should be look like this:"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Author List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/author/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"author",
+						""
+					]
+				},
+				"description": "## If you want to get Author List Data\n__You need to request Author List collection__\n\n{\n\n\"name\":\"String\",\n\n\"lastname\":\"String\",\n\n\"work\":\"String\"\n\n\"description\":\"String\"\n\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"String\",\r\n    \"lastname\": \"String\",\r\n    \"work\": \"String\",\r\n    \"description\": \"String\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/author/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"author",
+						""
+					]
+				},
+				"description": "## If you want to create Auhor Data.\n\n__You need to request Post Author collection__\n\nbody should be look like this:"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Author",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"String\",\r\n    \"lastname\": \"String\",\r\n    \"work\": \"String\",\r\n    \"description\": \"String\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/author/{authorid}/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"author",
+						"{authorid}",
+						""
+					]
+				},
+				"description": "## If you want to update Author Data.\n\n__You need to request Update Author collection__\n\nauthorid = put the authorid you want to update here\n\nbody should be look like this:"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/courses/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				},
+				"description": "## If you want to get Courses Content Data.\n\n__You need to request GET Courses Content collection__\n\n{\n\n\"name\":\"string\",\n\n\"description\":\"string\",\n\n\"language\":\"string\",\n\n\"price\":\"String\",\n\n\"author\":\"String\",\n\n\"category\":\"String\",\n\n\"coursecontent\":\"String\"\n\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Courses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"String\",\r\n    \"description\": \"String\",\r\n    \"author\":\"String\",\r\n    \"language\": \"String\",\r\n    \"price\": \"String\",\r\n    \"coursecontent\":\"String\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/courses/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses",
+						""
+					]
+				},
+				"description": "## If you want to create Courses Data.\n\n__You need to request Post Courses collection__\n\nBody should be look like this:"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Courses",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"String\",\r\n    \"description\": \"String\",\r\n    \"language\":\"String\",\r\n    \"price\":\"String\",\r\n    \"author\": \"String\",\r\n    \"category\":\"String\",\r\n    \"coursecontent\": \"String\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/courses/{courseid}/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses",
+						"{courseid}",
+						""
+					]
+				},
+				"description": "## If you want to update Courses Data.\n\n__You need to request Update Courses \ncollection__\n\ncourseid =  put the courseid you want to update here\n\nbody should be look like this:"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/category/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				},
+				"description": "## If you want to get Category Data.\n\n__You need to request GET Category List collection__\n\n{\n\n\"name\":\"string\",\n\n\"slug\":\"string\"\n\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Yazılım\",\r\n    \"slug\": \"yazilim\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/category/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				},
+				"description": "## If you want to create Category Data.\n\n__You need to request Post Category collection__\n\nbody should be look like this:"
+			},
+			"response": []
+		},
+		{
+			"name": "Put Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Donanım\",\r\n    \"slug\": \"donanim\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/category/{categoryid}/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"category",
+						"{categoryid}",
+						""
+					]
+				},
+				"description": "## If you want to update Category Data\n\n__You need to request Put Category collection__\n\ncategoryid = put the categoryid you want to update here\n\nbody should be look like this:"
+			},
+			"response": []
+		}
+	]
+}
